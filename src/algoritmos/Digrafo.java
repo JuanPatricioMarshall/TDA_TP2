@@ -3,9 +3,6 @@ package algoritmos;
 import java.util.*;
 
 
-/**
- * Created by Juampa on 5/6/2017.
- */
 public class Digrafo {
 
     Integer cantidadDeVertices;
