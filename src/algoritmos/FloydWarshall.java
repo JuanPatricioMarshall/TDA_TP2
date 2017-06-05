@@ -2,8 +2,6 @@ package algoritmos;
 
 
 import java.util.List;
-// A Java program for Floyd Warshall All Pairs Shortest
-// Path algorithm.
 import java.util.*;
 import java.lang.*;
 
