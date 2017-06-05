@@ -48,16 +48,6 @@ public class Digrafo {
         return vertices.get(src).get(dest).getWeight();
     }
 
-    public List<Integer> getVerticesAdyacentes(Integer vertice){
-        List<Integer> result = new ArrayList<Integer>();
-
-//        for(Arista arista : vertices[vertice]){
-//            result.add(arista.getDest());
-//        }
-
-        return result;
-    }
-
     public List<Arista> getAristas(){
         List<Arista> result = new ArrayList<Arista>();
 
