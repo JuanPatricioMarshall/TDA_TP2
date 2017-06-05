@@ -1,8 +1,6 @@
 package algoritmos;
 
-/**
- * Created by Juampa on 5/6/2017.
- */
+
 public class Arista {
 
     Integer src;
