@@ -1,8 +1,7 @@
 import algoritmos.*;
 
 import java.util.*;
-// A Java program for Dijkstra's single source shortest path algorithm.
-// The program is for adjacency matrix representation of the graph
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
@@ -17,8 +16,14 @@ public class Main {
 
             Scanner scanner = new Scanner(System.in);
             System.out.println("Ingrese cuantos nodos");
-
             Integer cantidadNodos = scanner.nextInt();
+
+            System.out.println("Ingrese nodo de origen");
+            Integer nodoDeOrigen = scanner.nextInt();
+
+            System.out.println("Ingrese nodo de destino");
+            Integer nodoDeDestino = scanner.nextInt();
+
             Digrafo digrafo = helper.buildGrafo(cantidadNodos);
 
 
@@ -27,7 +32,7 @@ public class Main {
             System.out.println("Dijkstra");
 
             long startTimeDijkstra = System.nanoTime();
-            List<Integer>  result = dijkstra.getShortestPath(0,10);
+            List<Integer>  result = dijkstra.getShortestPath(nodoDeOrigen,nodoDeDestino);
             long endTimeDijkstra = System.nanoTime();
             double durationDijkstra = (endTimeDijkstra - startTimeDijkstra);  //divide by 1000000 to get milliseconds.
             System.out.println("Duracion de Dijstra: " + durationDijkstra/1000000000 + " segundos");
@@ -58,7 +63,7 @@ public class Main {
 
 
             long startTimeBellman = System.nanoTime();
-            List<Integer> result2 = bellmanFord.getShortestPath(0,10);
+            List<Integer> result2 = bellmanFord.getShortestPath(nodoDeOrigen,nodoDeDestino);
             long endTimeBellman = System.nanoTime();
             double durationBellman = (endTimeBellman - startTimeBellman);  //divide by 1000000 to get milliseconds.
             System.out.println("Duracion de Bellman-Ford: " + durationBellman/1000000000 + " segundos");
@@ -82,7 +87,7 @@ public class Main {
 
 
             long startTimeFloyd = System.nanoTime();
-            floydWarshall.getShortestPath(0,10);
+            floydWarshall.getShortestPath(nodoDeOrigen,nodoDeDestino);
             long endTimeFloyd = System.nanoTime();
             double durationFloyd = (endTimeFloyd - startTimeFloyd);  //divide by 1000000 to get milliseconds.
             System.out.println("Duracion de Floyd-Warshall: " + durationFloyd/1000000000 + " segundos");
